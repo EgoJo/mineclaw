@@ -49,6 +49,8 @@ pnpm dev
 
 ```
 mineclaw/
+├── README.md                 # 本说明
+├── ITERATION_ROADMAP.md      # 迭代与优化路线图
 ├── shenzhen-survival-sim/   # 后端：世界引擎 + Bot Agent + Python Dashboard
 │   ├── world_engine_v8.py    # 世界引擎（FastAPI，端口 8000）
 │   ├── bot_agent_v8.py       # Bot 智能体进程（每个 Bot 一个进程）
@@ -59,8 +61,7 @@ mineclaw/
 │   ├── sz_dashboard_v6.py    # 旧版 Python Dashboard（FastAPI，端口 9000）
 │   ├── soul.md               # 10 个 Bot 的人设定义
 │   ├── run.sh                # 统一启动脚本（引擎 + Python Dashboard）
-│   ├── LLM_AND_API_KEYS.md   # LLM 调用位置与 Key 配置说明
-│   └── ITERATION_ROADMAP.md  # 迭代与优化路线图
+│   └── LLM_AND_API_KEYS.md   # LLM 调用位置与 Key 配置说明
 │
 └── shenzhen-pixel-city/      # 前端：像素城市可视化 Dashboard
     ├── client/               # React 前端（Vite）
@@ -237,7 +238,7 @@ pnpm dev
    - **Bot**：`WORLD_ENGINE_URL` 默认 `http://localhost:8000`，部署时可按需改为实际引擎地址。
 
 5. **本机路径与日志**  
-   - 世界引擎与 Bot 中有部分写死路径（如 `/home/ubuntu/logs`、`/home/ubuntu/shenzhen-survival-sim/bot_agent_v8.py`）。本机开发时若目录不同，需修改为当前项目路径或通过环境变量/配置统一管理（可参考 `ITERATION_ROADMAP.md` 中的工程优化项）。
+   - 世界引擎与 Bot 中有部分写死路径（如 `/home/ubuntu/logs`、`/home/ubuntu/shenzhen-survival-sim/bot_agent_v8.py`）。本机开发时若目录不同，需修改为当前项目路径或通过环境变量/配置统一管理（可参考根目录 `ITERATION_ROADMAP.md` 中的工程优化项）。
 
 ---
 
@@ -246,7 +247,7 @@ pnpm dev
 | 文档 | 位置 | 内容 |
 |------|------|------|
 | LLM 与 API Key | `shenzhen-survival-sim/LLM_AND_API_KEYS.md` | LLM 调用位置、所用模型、Key 统一配置说明 |
-| 迭代路线图 | `shenzhen-survival-sim/ITERATION_ROADMAP.md` | 工程/架构优化与玩法/机制迭代清单 |
+| 迭代路线图 | `ITERATION_ROADMAP.md` | 工程/架构优化与玩法/机制迭代清单 |
 | v8.3 改进计划 | `shenzhen-survival-sim/v8.3_improvement_plan.md` | 状态同步、情绪、对话、长期目标等设计 |
 | v8.3 升级报告 | `shenzhen-survival-sim/v8.3_upgrade_report.md` | 实际修复与验证结果 |
 | v10 设计 | `shenzhen-survival-sim/v10_design.md` | Generic 工具与反馈循环设计 |
