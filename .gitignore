@@ -1,0 +1,9 @@
+# 根目录 .gitignore（整个 mineclaw 仓库）
+.env
+.env.local
+*.pyc
+__pycache__/
+node_modules/
+.DS_Store
+*.log
+.manus-logs/
